@@ -171,7 +171,13 @@ def liver():
 def ValuePred(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1,size)
     if(size==7):
+        
+        #   ##testing
+        # print("version error")
+        
         loaded_model = joblib.load('liver_model.pkl')
+        
+      
         result = loaded_model.predict(to_predict)
     return result[0]
 
@@ -199,8 +205,11 @@ def logout():
     return redirect(url_for('index'))
 
 
+#Breast cancer..
+
 @app.route('/predict', methods=['POST'])
 def predict():
+   
     input_features = [int(x) for x in request.form.values()]
     features_value = [np.array(input_features)]
     features_name = ['clump_thickness', 'uniform_cell_size', 'uniform_cell_shape', 'marginal_adhesion',
@@ -216,6 +225,8 @@ def predict():
 
 
 ##################################################################################
+
+# Training and testing diabetes model
 
 df1 = pd.read_csv('diabetes.csv')
 
@@ -252,6 +263,7 @@ pickle.dump(classifier, open(filename, 'wb'))
 
 #####################################################################
 
+#Diabetes prediction
 
 @app.route('/predictt', methods=['POST'])
 def predictt():
