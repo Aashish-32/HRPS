@@ -1,0 +1,84 @@
+Heart Disease :
+
+age: The age of the patient in years (numerical).
+
+########################################################################
+
+sex: The sex of the patient (categorical):
+
+    0: Male
+    1: Female
+
+########################################################################
+cp: Chest pain type (categorical).
+
+    0: Typical angina
+    1: Atypical angina
+    2: Non-anginal pain
+    3: Asymptomatic
+
+########################################################################
+
+trestbps: Resting blood pressure (numerical).
+
+########################################################################
+
+chol: Serum cholesterol in mg/dl (numerical).
+
+########################################################################
+
+fbs: Fasting blood sugar > 120 mg/dl (categorical).
+
+    0: False
+    1: True
+
+########################################################################
+
+restecg: Resting electrocardiographic results (categorical).
+
+    0: Indicates a normal result.
+    1: Indicates an abnormal result (ST-T wave abnormality or left ventricular hypertrophy)
+
+########################################################################
+
+thalach: Maximum heart rate achieved (numerical).
+
+########################################################################
+
+exang: Exercise induced angina (categorical).
+
+    0: No
+    1: Yes
+
+########################################################################
+
+oldpeak: ST depression induced by exercise relative to rest (numerical).
+
+########################################################################
+
+slope: The slope of the peak exercise ST segment (categorical).
+
+    0: Upsloping
+    1: Flat
+    2: Downsloping
+
+########################################################################
+
+ca: Number of major vessels colored by fluoroscopy (numerical).
+
+########################################################################
+
+thal: Thalassemia (categorical).
+
+    1: Fixed defect
+    2: Reversible defect
+    3: Normal
+    
+########################################################################
+
+target: Presence of heart disease (categorical).
+
+    0: No disease
+    1: Disease present
+
+ ########################################################################

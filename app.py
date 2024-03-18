@@ -17,6 +17,7 @@ filename = 'diabetes-prediction-rfc-model.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
 
+
 # model1 = pickle.load(open('model1.pkl', 'rb'))
 
 app = Flask(__name__)
@@ -291,13 +292,14 @@ def predictheart():
     features_value = [np.array(input_features)]
 
     features_name = ["age", "trestbps", "chol", "thalach", "oldpeak", "sex_0",
-                     "  sex_1", "cp_0", "cp_1", "cp_2", "cp_3", "  fbs_0",
-                     "restecg_0", "restecg_1", "restecg_2", "exang_0", "exang_1",
-                     "slope_0", "slope_1", "slope_2", "ca_0", "ca_1", "ca_2", "thal_1",
-                     "thal_2", "thal_3"]
+                     "  sex_1", "cp_0", "cp_1", "cp_2", "cp_3", "fbs_0", "fbs_0",
+                     "restecg_0", "restecg_1", "restecg_2", "exang_0", "exang_1", "exang_2", "exang_3", "exang_4"
+                     "slope_0", "slope_1", "slope_2", "ca_0", "ca_1", "ca_2", "thal_0",
+                     "thal_1", "thal_2", "thal_3"]
 
     df = pd.DataFrame(features_value, columns=features_name)
-    output = model1.predict(df)
+    heartpkl=pickle.load(open('heart.pkl', 'rb'))
+    output = heartpkl.predict(df)
 
     if output == 1:
         res_val = "a high risk of Heart Disease"
@@ -305,8 +307,6 @@ def predictheart():
         res_val = "a low risk of Heart Disease"
 
     return render_template('heart_result.html', prediction_text='Patient has {}'.format(res_val))
-
-
 ############################################################################################################
 
 if __name__ == "__main__":
