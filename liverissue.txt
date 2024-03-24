@@ -1,0 +1,52 @@
+
+To address the imbalance in your dataset where the "yes"
+ attribute has more data than "no," 
+ you can use various techniques: oversampling, undersampling, and using class weights:
+
+Oversampling:
+
+Oversampling involves increasing the number of instances
+ in the minority class (in this case, "no") to match the number of instances in the majority class ("yes").
+One common technique for oversampling is Synthetic
+ Minority Over-sampling Technique (SMOTE), which generates synthetic
+  samples for the minority class based on the existing samples.
+
+Undersampling:
+
+Undersampling involves decreasing the number of
+ instances in the majority class to match the number of instances in the minority class.
+Random undersampling randomly selects instances from the majority class to remove.
+
+Using Class Weights:
+
+Most machine learning algorithms allow you to assign 
+higher weights to the minority class during training to make them more influential in the model's learning process.
+For example, in scikit-learn, you can set the
+ class_weight parameter to 'balanced' to automatically adjust weights inversely 
+ proportional to class frequencies.
+
+from imblearn.under_sampling import RandomUnderSampler
+
+# Define the undersampling strategy
+undersample = RandomUnderSampler(sampling_strategy='majority')
+
+# Fit and apply the undersampling strategy
+X_resampled, y_resampled = undersample.fit_resample(X_train, y_train)
+
+
+from imblearn.over_sampling import SMOTE
+
+# Define the oversampling strategy
+smote = SMOTE(sampling_strategy='minority')
+
+# Fit and apply the oversampling strategy
+X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
+
+
+from sklearn.ensemble import RandomForestClassifier
+
+# Define the classifier with class weights
+clf = RandomForestClassifier(class_weight='balanced')
+
+# Fit the classifier to the data
+clf.fit(X_train, y_train)

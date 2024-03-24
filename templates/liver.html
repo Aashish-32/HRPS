@@ -157,6 +157,10 @@ fieldset button
     <form action="{{ url_for('predictliver')}}" method="post" class="form-inline">
         <fieldset>
           <div class="tabcontent" id="new">
+            <div class="form-group">
+                <label for="Age">Age</label>
+                <input class="form-control" type="number" id="Age" name="Age" required="required" placeholder="Enter the Age">
+              </div>
               <div class="form-group">
                 <label for="Total Bilirubin">Total Bilirubin</label>
                 <input class="form-control" type="number" id="Total Bilirubin" name="Total Bilirubin" required="required" placeholder="Enter the Total Bilirubin">
@@ -174,6 +178,10 @@ fieldset button
                 <input class="form-control" type="number" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required="required" placeholder="Enter the Alamine Aminotransferase">
               </div>
               <div class="form-group">
+                <label for="ASAminotransferase">Aspartate Aminotransferase</label>
+                <input class="form-control" type="number" id="_Aminotransferase" name="e_Aminotransferase" required="required" placeholder="Enter the Alamine Aminotransferase">
+              </div>
+              <div class="form-group">
                 <label for="Total_Protiens">Total Protiens</label>
                 <input class="form-control" type="number" id="Total_Protiens" name="Total_Protiens" required="required" placeholder="Enter the Total Protiens">
               </div>
@@ -183,7 +191,11 @@ fieldset button
               </div>
               <div class="form-group">
                 <label for="Albumin_and_Globulin_Ratio">Albumin and Globulin Ratio</label>
-                <input class="form-control" type="number" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio" required="required" placeholder="Enter the Albumin and Globulin Ratio">
+                <input class="form-control" type="number" id="Gender" name="Gender" required="required" placeholder="Enter the Albumin and Globulin Ratio">
+              </div>
+              <div class="form-group">
+                <label for="Gender">Gender</label>
+                <input class="form-control" type="number" id="Gender" name="Gender" required="required" placeholder="Male:1 , female:0">
               </div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
         </div>

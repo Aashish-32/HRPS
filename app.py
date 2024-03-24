@@ -170,16 +170,18 @@ def liver():
 
 
 def ValuePred(to_predict_list, size):
-    to_predict = np.array(to_predict_list).reshape(1,size)
-    if(size==7):
+    
+    print(len(to_predict_list))
+    to_predict_list.append(0.0)
+    print(len(to_predict_list))
+    to_predict = np.array(to_predict_list).reshape(1,10)
+    # if(size==10):
         
-        #   ##testing
-        # print("version error")
         
-        loaded_model = joblib.load('liver_model.pkl')
+    loaded_model = joblib.load('livernew.pkl')
         
       
-        result = loaded_model.predict(to_predict)
+    result = loaded_model.predict(to_predict)
     return result[0]
 
 
@@ -189,13 +191,13 @@ def predictliver():
         to_predict_list = request.form.to_dict()
         to_predict_list = list(to_predict_list.values())
         to_predict_list = list(map(float, to_predict_list))
-        if len(to_predict_list) == 7:
-            result = ValuePred(to_predict_list, 7)
+        # if len(to_predict_list) ==10:
+        result = ValuePred(to_predict_list, 9)
 
     if int(result) == 1:
         prediction = "Patient has a high risk of Liver Disease, please consult your doctor immediately"
     else:
-        prediction = "Patient has a low risk of Kidney Disease"
+        prediction = "Patient has a low risk of liver Disease"
     return render_template("liver_result.html", prediction_text=prediction)
 
 
