@@ -13,6 +13,8 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
+
+
 filename = 'diabetes-prediction-rfc-model.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
@@ -171,18 +173,19 @@ def liver():
 
 def ValuePred(to_predict_list, size):
     
-    print(len(to_predict_list))
-    to_predict_list.append(0.0)
-    print(len(to_predict_list))
-    to_predict = np.array(to_predict_list).reshape(1,10)
-    # if(size==10):
+    import sklearn 
+    print(sklearn.__version__)
+   
+    to_predict = np.array(to_predict_list).reshape(1,11)
+    if(size==11):
         
         
-    loaded_model = joblib.load('livernew.pkl')
+        loaded_model = joblib.load('liver.pkl')
         
       
-    result = loaded_model.predict(to_predict)
-    return result[0]
+        result = loaded_model.predict(to_predict)
+        return result[0]
+
 
 
 @app.route('/predictliver', methods=["POST"])
@@ -191,14 +194,18 @@ def predictliver():
         to_predict_list = request.form.to_dict()
         to_predict_list = list(to_predict_list.values())
         to_predict_list = list(map(float, to_predict_list))
-        # if len(to_predict_list) ==10:
-        result = ValuePred(to_predict_list, 9)
+        result = ValuePred(to_predict_list, 11)
 
-    if int(result) == 1:
-        prediction = "Patient has a high risk of Liver Disease, please consult your doctor immediately"
-    else:
-        prediction = "Patient has a low risk of liver Disease"
+        
+        if int(result) == 1:
+            prediction = "Patient has a high risk of Liver Disease, please consult your doctor immediately"
+        else:
+            
+            prediction = "Patient has a low risk of liver Disease"
+        
+
     return render_template("liver_result.html", prediction_text=prediction)
+
 
 
 @app.route('/logout')

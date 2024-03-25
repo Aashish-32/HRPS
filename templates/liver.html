@@ -157,46 +157,62 @@ fieldset button
     <form action="{{ url_for('predictliver')}}" method="post" class="form-inline">
         <fieldset>
           <div class="tabcontent" id="new">
+           
             <div class="form-group">
-                <label for="Age">Age</label>
-                <input class="form-control" type="number" id="Age" name="Age" required="required" placeholder="Enter the Age">
-              </div>
-              <div class="form-group">
-                <label for="Total Bilirubin">Total Bilirubin</label>
-                <input class="form-control" type="number" id="Total Bilirubin" name="Total Bilirubin" required="required" placeholder="Enter the Total Bilirubin">
-              </div>
-              <div class="form-group">
-                <label for="Direct_Bilirubin">Direct Bilirubin</label>
-                <input class="form-control" type="number" step="any" id="Direct_Bilirubin" name="Direct_Bilirubin" required="required" placeholder="Enter the Direct_Bilirubin">
-              </div>
-              <div class="form-group">
-                <label for="Alkaline_Phosphotase">Alkaline Phosphotase</label>
-                <input class="form-control" type="number" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" required="required" placeholder="Enter the Alkaline Phosphotase">
-              </div>
-              <div class="form-group">
-                <label for="Alamine_Aminotransferase">Alamine Aminotransferase</label>
-                <input class="form-control" type="number" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required="required" placeholder="Enter the Alamine Aminotransferase">
-              </div>
-              <div class="form-group">
-                <label for="ASAminotransferase">Aspartate Aminotransferase</label>
-                <input class="form-control" type="number" id="_Aminotransferase" name="e_Aminotransferase" required="required" placeholder="Enter the Alamine Aminotransferase">
-              </div>
-              <div class="form-group">
-                <label for="Total_Protiens">Total Protiens</label>
-                <input class="form-control" type="number" id="Total_Protiens" name="Total_Protiens" required="required" placeholder="Enter the Total Protiens">
-              </div>
-              <div class="form-group">
-                <label for="Albumin">Albumin</label>
-                <input class="form-control" type="number" id="Albumin" name="Albumin" required="required" placeholder="Enter the Albumin">
-              </div>
-              <div class="form-group">
-                <label for="Albumin_and_Globulin_Ratio">Albumin and Globulin Ratio</label>
-                <input class="form-control" type="number" id="Gender" name="Gender" required="required" placeholder="Enter the Albumin and Globulin Ratio">
-              </div>
-              <div class="form-group">
-                <label for="Gender">Gender</label>
-                <input class="form-control" type="number" id="Gender" name="Gender" required="required" placeholder="Male:1 , female:0">
-              </div>
+              <label for="Age">Age</label>
+              <input class="form-control" type="number" id="Age" name="Age" required="required" placeholder="Enter the Age">
+          </div>
+          
+          <div class="form-group">
+              <label for="Total_Bilirubin">Total Bilirubin</label>
+              <input class="form-control" type="number" id="Total_Bilirubin" name="Total_Bilirubin" required="required" placeholder="Enter the Total Bilirubin">
+          </div>
+          
+          <div class="form-group">
+              <label for="Direct_Bilirubin">Direct Bilirubin</label>
+              <input class="form-control" type="number" id="Direct_Bilirubin" name="Direct_Bilirubin" required="required" placeholder="Enter the Direct Bilirubin">
+          </div>
+          
+          <div class="form-group">
+              <label for="Alkaline_Phosphotase">Alkaline Phosphotase</label>
+              <input class="form-control" type="number" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" required="required" placeholder="Enter the Alkaline Phosphotase">
+          </div>
+          
+          <div class="form-group">
+              <label for="Alamine_Aminotransferase">Alamine Aminotransferase</label>
+              <input class="form-control" type="number" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required="required" placeholder="Enter the Alamine Aminotransferase">
+          </div>
+          
+          <div class="form-group">
+              <label for="Aspartate_Aminotransferase">Aspartate Aminotransferase</label>
+              <input class="form-control" type="number" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" required="required" placeholder="Enter the Aspartate Aminotransferase">
+          </div>
+          
+          <div class="form-group">
+              <label for="Total_Protiens">Total Proteins</label>
+              <input class="form-control" type="number" id="Total_Protiens" name="Total_Protiens" required="required" placeholder="Enter the Total Proteins">
+          </div>
+          
+          <div class="form-group">
+              <label for="Albumin">Albumin</label>
+              <input class="form-control" type="number" id="Albumin" name="Albumin" required="required" placeholder="Enter the Albumin">
+          </div>
+          
+          <div class="form-group">
+              <label for="Albumin_and_Globulin_Ratio">Albumin and Globulin Ratio</label>
+              <input class="form-control" type="number" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio" required="required" placeholder="Enter the Albumin and Globulin Ratio">
+          </div>
+          
+          <div class="form-group">
+              <label for="Gender_Female">Gender Female</label>
+              <input class="form-control" type="number" id="Gender_Female" name="Gender_Female" required="required" placeholder="Enter the Gender Female">
+          </div>
+          
+          <div class="form-group">
+              <label for="Gender_Male">Gender Male</label>
+              <input class="form-control" type="number" id="Gender_Male" name="Gender_Male" required="required" placeholder="Enter the Gender Male">
+          </div>
+          
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
         </div>
       </fieldset>
