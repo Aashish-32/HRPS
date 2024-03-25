@@ -160,7 +160,8 @@ fieldset button
                         <li class="nav-item">
                             <a class="nav-link" href="/liver">Liver Disease</a>
                         </li>
-                        <li class="nav-item px-4 ">
+                        <li class="nav-item px-4 d-lg-block d-md-none">
+
                             <a class="nav-link" href="#">|</a>
                         </li>
                         <li class="nav-item">
@@ -173,10 +174,10 @@ fieldset button
         </nav>
     </header><br/><br/>
     <h1  class=" align-content-center text-center pt-5">Diabetes Prediction</h1>
-    <h5 class=" align-content-center text-center ">Please enter the patient details</h5>
+    
     <form action="{{ url_for('predictt')}}" method="post" class="form-inline">
         <fieldset class="rounded-3 shadow border ">
-
+            <h5 class=" align-content-center text-center ">Please enter the patient details</h5>
             <div class="tabcontent" id="new">
                  <div class="form-group">
                     <label for="pregnancies">Number of Pregnancies</label>

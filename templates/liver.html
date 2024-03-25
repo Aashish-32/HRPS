@@ -11,6 +11,16 @@
 	<title>RiskAssess | Liver Disease Prediction</title>
 </head>
 <style>
+     nav {
+        font-family: "Roboto", sans-serif;
+    }
+
+    .navbar-brand {
+        font-size: 30px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
 	button
 {
 	border-style:none;
@@ -31,29 +41,28 @@ form {
 form fieldset{
 	padding: 30px;
 	border-width: 20px;
-	border-style: groove;
     border-color: #5a5a5a;
 	background-color: #fff;
 }
 
 fieldset h1 {
-	color: #5a5a5a;
-	padding-bottom: 20px;
-	margin-left: 35px;
-	display: inline-block;
-	cursor: pointer;
-	font-size: 28px;
-	text-align: center;
-}
+        color: #5a5a5a;
+        padding-bottom: 20px;
+        margin-left: 35px;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 28px;
+        text-align: center;
+    }
 
-fieldset label {
-	margin-left: 20px;
-	margin-right: 40px;
-	padding: 23px;
-	font-size: 20px;
-	display: inline-block;
-    width  : 240px;
-}
+    fieldset label {
+        margin-left: 20px;
+        margin-right: 40px;
+        padding: 23px;
+        font-size: 16px;
+        display: inline-block;
+        width: 240px;
+    }
 fieldset input{
 	padding:8px;
 	color: #938c8c
@@ -116,48 +125,57 @@ fieldset button
 <body>
 
 	<header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <a class="navbar-brand" href="#"><b>RISK ASSESS</b></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom border-light-subtle">
+            <div class="container-sm d-flex justify-content-between align-items-center">
+
+                <a class="navbar-brand" href="/dashboard">HRPS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
+
+
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dashboard">Get Started</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/disindex">Disease Index</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cancer">Breast Cancer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/diabetes">Diabetes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/heart">Heart Disease</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/kidney">Kidney Disease</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/liver">Liver Disease</a>
-                    </li>
-                    <li class="nav-item">
-		                <a class="nav-link" href="#">|</a>
-		            </li>
-                    <li class="nav-item">
-		                <a class="nav-link" href="/logout">Logout</a>
-		            </li>
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="/dashboard">Get Started</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/disindex">Disease Index</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cancer">Breast Cancer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/diabetes">Diabetes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/heart">Heart Disease</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/kidney">Kidney Disease</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/liver">Liver Disease</a>
+                        </li>
+                        <li class="nav-item px-4 d-lg-block d-md-none">
+
+                            <a class="nav-link" href="#">|</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+
                     </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
     </header><br/><br/>
-    <h1 style="text-align:center;">Liver Disease Prediction</h1>
-    <h5 style="text-align:center;">Please enter the patient details</h5>
+    <h1 class="align-content-center text-center pt-5">Liver Disease Prediction</h1>
     <form action="{{ url_for('predictliver')}}" method="post" class="form-inline">
-        <fieldset>
+        <fieldset class="rounded-3 shadow border ">
+            <h5 class="align-content-center text-center">Please enter the patient details</h5>
           <div class="tabcontent" id="new">
            
             <div class="form-group">
@@ -215,7 +233,7 @@ fieldset button
               <input class="form-control" type="number" id="Gender_Male" name="Gender_Male" required="required" placeholder="Enter the Gender Male">
           </div>
           
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn bg-success px-5 text-white">Predict</button>
         </div>
       </fieldset>
     </form>
