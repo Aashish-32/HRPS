@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>RiskAssess | Get Started</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link rel="stylesheet" type="text/css" href="static/css/aboutus.css">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RiskAssess | Get Started</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/aboutus.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
 
-    <style>
-        body {
-    padding-top: 3.5rem;
-}
 
-nav {
-    font-family: sans-serif;
-}
 
-.navbar-brand {
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-    </style>
+  <style>
+    
+      nav {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .navbar-brand {
+        font-size: 30px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+  </style>
 
 </head>
+
 <body>
-    <form id="form1">
-        <header>
-            <!--Navigation Bar-->
-			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <a class="navbar-brand" href="#"><b>RISK ASSESS</b></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/dashboard">Get Started</a>
+  <form id="form1">
+    <header>
+      <!--Navigation Bar-->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom border-light-subtle">
+        <div class="container-sm d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand" href="/dashboard">HRPS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link  active" aria-current="page" href="/dashboard">Get Started</a>
+                    </li>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/disindex">Disease Index</a>
@@ -55,82 +66,98 @@ nav {
                         <a class="nav-link" href="/heart">Heart Disease</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/kidney">Kidney Disease</a>
+                        <a class="nav-link " href="/kidney">Kidney Disease</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/liver">Liver Disease</a>
                     </li>
+                    <li class="nav-item px-4 d-lg-block d-md-none">
+
+                        <a class="nav-link" href="#">|</a>
+                    </li>
                     <li class="nav-item">
-		                <a class="nav-link" href="#">|</a>
-		            </li>
-                    <li class="nav-item">
-		                <a class="nav-link" href="/logout">Logout</a>
-		            </li>
-                    </ul>
-                </div>
-            </nav>
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
 
-         <main role="main">
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <div class="jumbotron">
-    <div class="container">
-      <h1 class="display-4">Hello! Lets Get Started with RiskAssess</h1>
-      <p>Welcome to RiskAssess!, a risk assessment system for medical institutions to generate risk assessments for their patients. RiskAssess started off as a company that formed strong relationships with medical institutions to help them generate their assessments with ease and maximum efficiency thus saving the organization's valuable time.
-          Click below to learn about the diseases that RiskAssess is capable of assessing.</p>
-      <p><a class="btn btn-primary btn-lg" href="/disindex" role="button">Get Started &raquo;</a></p>
-    </div>
-  </div>
+      <main role="main">
 
-  <div class="container">
+        <div class="jumbotron">
+          <div class="container pt-5">
+            <h1 class="display-4">Hello! Lets Get Started with RiskAssess</h1>
+            <p>Welcome to RiskAssess!, a risk assessment system for medical institutions to generate risk assessments
+              for their patients. RiskAssess started off as a company that formed strong relationships with medical
+              institutions to help them generate their assessments with ease and maximum efficiency thus saving the
+              organization's valuable time.
+              Click below to learn about the diseases that RiskAssess is capable of assessing.</p>
+            <p><a class="btn bg-success px-5 text-white btn-lg" href="/disindex" role="button">Get Started &raquo;</a></p>
+          </div>
+        </div>
 
-    <div class="row">
-      <div class="col-md-4">
-        <h2>1. Cancer Prediction</h2>
-        <p>Navigate to the "Cancer" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
+        <div class="container">
 
-      </div>
-      <div class="col-md-4">
-        <h2>2. Diabetes Prediction</h2>
-        <p>Navigate to the "Diabetes" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
+          <div class="row">
+            <div class="col-md-4">
+              <h2>1. Cancer Prediction</h2>
+              <p>Navigate to the "Cancer" section and add the corresponding details and click on predict to learn
+                whether the patient is at the risk of this illness/disease.</p>
 
-      </div>
-      <div class="col-md-4">
-        <h2>3. Heart Disease</h2>
-        <p>Navigate to the "Heart Disease" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
+            </div>
+            <div class="col-md-4">
+              <h2>2. Diabetes Prediction</h2>
+              <p>Navigate to the "Diabetes" section and add the corresponding details and click on predict to learn
+                whether the patient is at the risk of this illness/disease.</p>
 
-      </div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col-md-4">
-        <h2>4. Kidney Disease</h2>
-        <p>Navigate to the "Kidney Disease" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
+            </div>
+            <div class="col-md-4">
+              <h2>3. Heart Disease</h2>
+              <p>Navigate to the "Heart Disease" section and add the corresponding details and click on predict to learn
+                whether the patient is at the risk of this illness/disease.</p>
 
-      </div>
-      <div class="col-md-4">
-        <h2>5. Liver Disease </h2>
-        <p>Navigate to the "Liver Disease" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+              <h2>4. Kidney Disease</h2>
+              <p>Navigate to the "Kidney Disease" section and add the corresponding details and click on predict to
+                learn whether the patient is at the risk of this illness/disease.</p>
 
-      </div>
-      <div class="col-md-4">
-        <h2>6. Disease Index</h2>
-        <p>Navigate to the "Disease Index" section and gain in-depth information about each of these diseases.</p>
+            </div>
+            <div class="col-md-4">
+              <h2>5. Liver Disease </h2>
+              <p>Navigate to the "Liver Disease" section and add the corresponding details and click on predict to learn
+                whether the patient is at the risk of this illness/disease.</p>
 
-      </div>
-    </div>
-    </div>
-    <hr>
-  </div>
-</main>
+            </div>
+            <div class="col-md-4">
+              <h2>6. Disease Index</h2>
+              <p>Navigate to the "Disease Index" section and gain in-depth information about each of these diseases.</p>
 
-<footer class="container">
-  <p>&copy;riskassess. All Rights Reserved</p>
-</footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+            </div>
+          </div>
+        </div>
+        <hr>
+        </div>
+      </main>
 
-    </form>
+      <footer class="container">
+        <p>&copy;riskassess. All Rights Reserved</p>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+      <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+  </form>
 </body>
+
 </html>
-
-
