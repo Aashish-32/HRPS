@@ -150,9 +150,9 @@ def kidney():
 
 def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1, size)
-    if size == 7:
-        loaded_model = joblib.load('kidney_model.pkl')
-        result = loaded_model.predict(to_predict)
+    # if size == 18:
+    loaded_model = joblib.load('kidneyNew.pkl')
+    result = loaded_model.predict(to_predict)
     return result[0]
 
 
@@ -162,8 +162,8 @@ def predictkidney():
         to_predict_list = request.form.to_dict()
         to_predict_list = list(to_predict_list.values())
         to_predict_list = list(map(float, to_predict_list))
-        if len(to_predict_list) == 7:
-            result = ValuePredictor(to_predict_list, 7)
+        # if len(to_predict_list) == 18:
+        result = ValuePredictor(to_predict_list, 18)
     if(int(result) == 1):
         prediction = "Patient has a high risk of Kidney Disease, please consult your doctor immediately"
     else:
@@ -233,7 +233,7 @@ def predict():
     df = pd.DataFrame(features_value, columns=features_name)
     output = model.predict(df)
     if output == 4:
-        res_val = "a high risk of Breast Cancer"
+        res_val = "a high risk of Breast Cancer, please consult your doctor immediately"
     else:
         res_val = "a low risk of Breast Cancer"
 
@@ -317,7 +317,7 @@ def predictheart():
     output = heartpkl.predict(df)
 
     if output == 1:
-        res_val = "a high risk of Heart Disease"
+        res_val = "a high risk of Heart Disease, please consult your doctor immediately"
     else:
         res_val = "a low risk of Heart Disease"
 
