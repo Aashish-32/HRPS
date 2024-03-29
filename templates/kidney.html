@@ -182,12 +182,12 @@
                     </ul>
                 </div>
             </nav>
-    </header><br/><br/><br>
-    <h1 style="text-align:center;">Kidney Disease Prediction</h1>
-    <h5 style="text-align:center;">Please enter the patient details</h5>
+    </header><br/><br/>
+    <h1 class="align-content-center text-center pt-5">Kidney Disease Prediction</h1>
 
     <form action="{{ url_for('predictkidney')}}" method="post" class="form-inline">
-        <fieldset>
+        <fieldset class="rounded-3 shadow border ">
+            <h5 class="align-content-center text-center">Please enter the patient details</h5>
             <div class="tabcontent" id="new">
                 <div class="form-group">
                     <label for="Age">Age</label>
@@ -277,7 +277,7 @@
                     <input class="form-control" type="number" id="ane" name="ane" required="required" placeholder="Enter the Anemia">
                 </div>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn bg-success px-5 text-white">Predict</button>
 
             </div>
         </fieldset>
