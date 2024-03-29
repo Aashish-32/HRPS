@@ -11,6 +11,7 @@ from wtforms.validators import InputRequired, Email, Length
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
+from flask import flash
 import pandas as pd
 import pickle
 import numpy as np
@@ -92,7 +93,10 @@ def login():
             if check_password_hash(user.password, form.password.data):
                 login_user(user, remember=form.remember.data)
                 return redirect(url_for('dashboard'))
-
+            else:
+                flash('Invalid username or password. Please try again.', 'danger')
+        else:
+            flash('Invalid username or password. Please try again.', 'danger')
         return render_template("login.html", form=form)
     return render_template("login.html", form=form)
 
