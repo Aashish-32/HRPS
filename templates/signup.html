@@ -13,6 +13,16 @@ RiskAssess | Sign Up
 {% block content %}
 <div class="container">
 
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <ul class="flashes">
+    {% for category, message in messages %}
+    <li class="alert alert-{{ category }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+
   <form class="form-signin" method="POST" action="/signup">
     <h1 style="text-align:center; text-size:30px">RiskAssess</h1>
     <p style="text-align:center">Create Account</p>
@@ -26,16 +36,6 @@ RiskAssess | Sign Up
   <p style="text-align:center">Already have an account? <a href="/login">Login</a></p>
   <br/>
   <p style="text-align:center"><a href="/">Back Home</a></p>
-
-  {% with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
-  <ul class="flashes">
-    {% for category, message in messages %}
-    <li class="alert alert-{{ category }}">{{ message }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-  {% endwith %}
 
 </div> <!-- /container -->
 {% endblock %}
