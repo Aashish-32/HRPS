@@ -4,6 +4,7 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 import joblib
 from flask import Flask, render_template, redirect, url_for, request
+from sqlalchemy.exc import IntegrityError
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField
@@ -17,6 +18,7 @@ import pickle
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
+
 
 
 
@@ -107,9 +109,14 @@ def signup():
     if form.validate_on_submit():
         hashed_password = generate_password_hash(form.password.data, method='pbkdf2:sha256')
         new_user = User(username=form.username.data, email=form.email.data, password=hashed_password)
-        db.session.add(new_user)
-        db.session.commit()
-
+        try:
+            db.session.add(new_user)
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
+            flash("Email address or username is already in use. Please use a different credential.", 'danger')
+            return redirect(url_for('signup'))
+        
         return redirect("/login")
     return render_template('signup.html', form=form)
 
@@ -181,8 +188,6 @@ def liver():
 
 def ValuePred(to_predict_list, size):
     
-    import sklearn 
-    print(sklearn.__version__)
    
     to_predict = np.array(to_predict_list).reshape(1,11)
     if(size==11):
