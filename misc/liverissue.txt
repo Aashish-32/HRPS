@@ -50,3 +50,7 @@ clf = RandomForestClassifier(class_weight='balanced')
 
 # Fit the classifier to the data
 clf.fit(X_train, y_train)
+
+
+
+Breast cancer, diabetes, kidney disease, and heart disease are complex health conditions that require early detection and precise diagnostic tools for effective management. Machine learning has emerged as a promising approach to improving diagnostic accuracy and prognostic assessment in these diseases. A 2019 research on Comparison different supervised machine learning algorithms for disease prediction [2], 
