@@ -1,0 +1,13 @@
+digraph {
+	A [label="Enter login credentials"]
+	B [label="Validate Credentials"]
+	C [label="Authenticate User"]
+	D [label="Select disease for prediction"]
+	E [label="Submit prediction request"]
+	F [label="Display prediction result"]
+	A -> B [label="Login credentials (username, password)"]
+	B -> C [label="Authentication request"]
+	C -> F [label="User authentication status"]
+	D -> E [label="Disease selection"]
+	E -> F [label="Prediction request (selected disease)"]
+}

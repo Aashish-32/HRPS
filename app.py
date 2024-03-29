@@ -25,8 +25,6 @@ filename = 'diabetes-prediction-rfc-model.pkl'
 model = pickle.load(open('model.pkl', 'rb'))
 
 
-# model1 = pickle.load(open('model1.pkl', 'rb'))
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
